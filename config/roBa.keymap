@@ -56,6 +56,20 @@
             bindings = <&kp A &kp B &kp S &kp N &kp A &kp I &kp T &kp O>;
             label = "P1";
         };
+
+        p2: p2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp I &kp N &kp A &kp S &kp T &kp O &kp R &kp Y &kp NUMBER_1 &kp N9 &kp N7 &kp N9>;
+            label = "P2";
+        };
+
+        p3: p3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp B &kp S &kp H &kp I &kp N &kp A &kp S &kp T &kp O &kp R &kp Y>;
+            label = "P3";
+        };
     };
 
     behaviors {
@@ -104,8 +118,8 @@
         ARROW {
             bindings = <
 &kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                              &kp HOME          &kp PAGE_DOWN       &kp PAGE_UP       &kp END                  &p1
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &kp LC(LS(T))  &kp LEFT_ARROW    &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW          &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &kp LC(R)      &kp LC(LG(LEFT))  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LC(LG(RIGHT_ARROW))  &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &kp LC(LS(T))  &kp LEFT_ARROW    &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW          &p2
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &kp LC(R)      &kp LC(LG(LEFT))  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LC(LG(RIGHT_ARROW))  &p3
 &trans          &trans                  &trans          &trans                   &trans   &trans      &trans         &trans                                                                           &trans
             >;
 
